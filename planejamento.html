@@ -3,413 +3,416 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório de Mudança Estratégica - Projeto [Sigla]</title>
+    <title>Comunicado de Mudança Estratégica - Projeto [Sigla]</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ESTILO DE DOCUMENTO CORPORATIVO */
-        .report-container {
-            max-width: 900px;
+        /* COMBINAÇÃO: Visual moderno + Estrutura formal */
+        .comunicado-container {
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 60px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-        .report-header {
-            border-bottom: 3px solid #0A2647;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-        }
-
-        .logo-area {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .logo-placeholder {
-            width: 200px;
-            height: 60px;
-            background: #F3F4F6;
-            border: 1px solid #D1D5DB;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            color: #6B7280;
-            font-size: 14px;
-        }
-
-        .report-title {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0A2647;
-            text-align: center;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-        }
-
-        .report-meta {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            font-size: 12px;
-        }
-
-        .meta-item {
-            border-left: 3px solid #0A2647;
-            padding-left: 10px;
-        }
-
-        .meta-item strong {
-            display: block;
-            color: #0A2647;
-            margin-bottom: 5px;
-        }
-
-        .meta-item span {
-            color: #6B7280;
-        }
-
-        .executive-summary {
-            background: #F0F9FF;
-            border-left: 5px solid #0A2647;
-            padding: 25px;
-            margin: 40px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .executive-summary h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #0A2647;
-            margin-bottom: 15px;
-        }
-
-        .executive-summary p {
-            color: #374151;
-            line-height: 1.7;
-        }
-
-        .notice-box {
-            background: #FEF3C7;
-            border: 2px solid #F59E0B;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .notice-box h3 {
-            color: #92400E;
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .notice-box .icon {
-            font-size: 24px;
-        }
-
-        .section-number {
-            background: #0A2647;
+        .comunicado-header {
+            background: linear-gradient(135deg, #0A2647 0%, #1E3A8A 100%);
             color: white;
-            font-weight: 700;
-            padding: 5px 12px;
-            border-radius: 50%;
-            font-size: 14px;
-            margin-right: 10px;
+            padding: 40px 60px;
+            position: relative;
         }
 
-        .section-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #0A2647;
-            margin: 40px 0 25px 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            font-size: 14px;
-        }
-
-        .comparison-table th {
-            background: #F9FAFB;
-            border-bottom: 2px solid #E5E7EB;
-            padding: 15px;
-            text-align: left;
-            color: #0A2647;
-            font-weight: 600;
-        }
-
-        .comparison-table td {
-            border-bottom: 1px solid #E5E7EB;
-            padding: 15px;
-            vertical-align: top;
-        }
-
-        .comparison-table tr:hover {
-            background: #F9FAFB;
-        }
-
-        .tag {
+        .comunicado-badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
-            text-transform: uppercase;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
         }
 
-        .tag-discontinued {
-            background: #FEE2E2;
-            color: #DC2626;
-        }
-
-        .tag-active {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .impact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .impact-card {
-            background: #F9FAFB;
-            border-radius: 8px;
-            padding: 25px;
-        }
-
-        .impact-card h4 {
-            color: #0A2647;
-            font-size: 16px;
+        .comunicado-title {
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
-        .impact-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .impact-card li {
-            padding: 8px 0;
-            color: #374151;
-            font-size: 14px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .impact-card .icon {
-            color: #10B981;
-            font-weight: bold;
-        }
-
-        .roadmap {
-            background: #F0F9FF;
-            border-radius: 8px;
-            padding: 30px;
-            margin: 40px 0;
-        }
-
-        .roadmap h3 {
-            color: #0A2647;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .roadmap-item {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #BFDBFE;
-        }
-
-        .roadmap-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .roadmap-phase {
-            background: #0A2647;
-            color: white;
-            font-weight: 700;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 14px;
-            min-width: 120px;
-            text-align: center;
-        }
-
-        .roadmap-content {
-            flex: 1;
-        }
-
-        .roadmap-content h5 {
-            color: #1E40AF;
+        .comunicado-subtitle {
             font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .roadmap-content p {
-            color: #374151;
-            font-size: 14px;
+            opacity: 0.9;
             line-height: 1.6;
         }
 
-        .action-required {
-            background: #F3F4F6;
-            border: 1px solid #D1D5DB;
-            border-radius: 8px;
-            padding: 25px;
-            margin-top: 40px;
+        .comunicado-meta {
+            position: absolute;
+            top: 30px;
+            right: 60px;
+            text-align: right;
+            font-size: 12px;
+            opacity: 0.8;
         }
 
-        .action-required h4 {
-            color: #0A2647;
+        .comunicado-content {
+            padding: 60px;
+        }
+
+        /* Aviso oficial destacado */
+        .official-notice {
+            background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+            border: 2px solid #F59E0B;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .official-notice::before {
+            content: "⚠️";
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: #F59E0B;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 16px;
+        }
+
+        .official-notice h3 {
+            color: #92400E;
+            font-size: 20px;
             font-weight: 700;
+            margin-bottom: 15px;
+            padding-left: 40px;
+        }
+
+        .official-notice p {
+            color: #78350F;
+            line-height: 1.7;
+        }
+
+        /* Cards de estratégia */
+        .strategy-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .strategy-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            padding: 25px;
+            color: white;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .strategy-card.old .card-header {
+            background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+        }
+
+        .strategy-card.new .card-header {
+            background: linear-gradient(135deg, #065F46 0%, #10B981 100%);
+        }
+
+        .card-status {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.2);
             margin-bottom: 15px;
         }
 
-        .action-list {
-            list-style: none;
-            counter-reset: action-counter;
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
-        .action-list li {
-            counter-increment: action-counter;
+        .card-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .card-body h4 {
+            color: #0A2647;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
             padding: 12px 0;
             border-bottom: 1px solid #E5E7EB;
             display: flex;
             align-items: flex-start;
             gap: 15px;
+            color: #374151;
+            font-size: 14px;
         }
 
-        .action-list li:last-child {
+        .feature-list li:last-child {
             border-bottom: none;
         }
 
-        .action-list li::before {
-            content: counter(action-counter);
-            background: #0A2647;
-            color: white;
+        .old .feature-list li::before {
+            content: "❌";
+            color: #DC2626;
+            font-weight: bold;
+        }
+
+        .new .feature-list li::before {
+            content: "✅";
+            color: #10B981;
+            font-weight: bold;
+        }
+
+        /* Impactos */
+        .impact-section {
+            background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin: 50px 0;
+        }
+
+        .impact-title {
+            text-align: center;
+            font-size: 24px;
             font-weight: 700;
-            width: 24px;
-            height: 24px;
+            color: #0A2647;
+            margin-bottom: 30px;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .impact-item {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .impact-item .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .impact-item h5 {
+            color: #0A2647;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .impact-item p {
+            color: #6B7280;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Roadmap visual */
+        .roadmap-section {
+            margin: 50px 0;
+        }
+
+        .roadmap-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #0A2647;
+            margin-bottom: 40px;
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .roadmap-timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #10B981, #E5E7EB);
+        }
+
+        .roadmap-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .roadmap-item::before {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #10B981;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px #10B981;
+        }
+
+        .roadmap-item.upcoming::before {
+            background: #E5E7EB;
+            box-shadow: 0 0 0 4px #E5E7EB;
+        }
+
+        .roadmap-phase {
             font-size: 12px;
-            flex-shrink: 0;
-            margin-top: 2px;
+            font-weight: 700;
+            color: #065F46;
+            background: #D1FAE5;
+            padding: 6px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
         }
 
-        .signature {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid #E5E7EB;
+        .roadmap-item.upcoming .roadmap-phase {
+            color: #6B7280;
+            background: #F3F4F6;
         }
 
-        .signature-grid {
+        .roadmap-content h4 {
+            color: #0A2647;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .roadmap-content p {
+            color: #6B7280;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Decisão e assinaturas */
+        .decision-section {
+            background: linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 50px;
+            border: 1px solid #E5E7EB;
+        }
+
+        .decision-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .decision-badge {
+            background: #10B981;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .decision-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0A2647;
+        }
+
+        .signatures {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #E5E7EB;
         }
 
         .signature-box {
             text-align: center;
         }
 
-        .signature-box p {
-            margin-bottom: 40px;
-            color: #6B7280;
-            font-size: 14px;
-        }
-
         .signature-line {
             border-bottom: 1px solid #9CA3AF;
             margin-bottom: 10px;
+            width: 100%;
         }
 
-        .footer-report {
-            text-align: center;
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #E5E7EB;
-            font-size: 12px;
-            color: #9CA3AF;
-        }
-
-        /* Override do style.css para layout de documento */
-        body {
-            background: #F3F4F6;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .container {
-            max-width: none;
-            padding: 40px 20px;
-        }
-
-        .navbar {
-            background: white;
-            padding: 20px 40px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-        }
-
-        .nav-logo {
-            color: #0A2647;
-        }
-
-        .nav-links a {
-            color: #6B7280;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #0A2647;
-            background: #F3F4F6;
+        .override-styles {
+            /* Sobrescreve estilos do style.css */
+            background: #F9FAFB !important;
+            font-family: 'Inter', sans-serif !important;
         }
 
         @media (max-width: 768px) {
-            .report-container {
-                padding: 30px 20px;
+            .comunicado-header {
+                padding: 30px 40px;
             }
             
-            .report-meta {
-                grid-template-columns: 1fr 1fr;
+            .comunicado-meta {
+                position: static;
+                text-align: left;
+                margin-top: 20px;
+            }
+            
+            .comunicado-content {
+                padding: 40px 30px;
+            }
+            
+            .strategy-comparison {
+                grid-template-columns: 1fr;
             }
             
             .impact-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .signatures {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-<body>
+<body class="override-styles">
     <div class="container">
-        <!-- Navbar principal -->
+        <!-- Navbar -->
         <nav class="navbar">
             <div class="nav-logo">Projeto [Sigla]</div>
             <ul class="nav-links">
@@ -420,291 +423,138 @@
             </ul>
         </nav>
 
-        <!-- Corpo do Relatório -->
-        <div class="report-container">
-            <!-- Cabeçalho -->
-            <div class="report-header">
-                <div class="logo-area">
-                    <div class="logo-placeholder">[LOGO DA EMPRESA]</div>
-                </div>
-                
-                <h1 class="report-title">RELATÓRIO DE MUDANÇA ESTRATÉGICA</h1>
-                
-                <div class="report-meta">
-                    <div class="meta-item">
-                        <strong>Documento</strong>
-                        <span>PLN-2024-001</span>
-                    </div>
-                    <div class="meta-item">
-                        <strong>Data</strong>
-                        <span>[DATA DA COMUNICAÇÃO]</span>
-                    </div>
-                    <div class="meta-item">
-                        <strong>Versão</strong>
-                        <span>1.0 - Final</span>
-                    </div>
-                    <div class="meta-item">
-                        <strong>Status</strong>
-                        <span>Decisão Aprovada</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Resumo Executivo -->
-            <div class="executive-summary">
-                <h2>Resumo Executivo</h2>
-                <p>
-                    Este documento formaliza a alteração na estratégia de transição do sistema legado para o novo sistema. 
-                    A abordagem de paralelismo indefinido foi descontinuada em [DATA DA DECISÃO] devido a evidências de 
-                    ineficiência operacional e retrabalho crescente. A nova estratégia adota entrega de MVP funcional 
-                    seguido de evolução incremental, aprovada pela diretoria responsável.
-                </p>
-            </div>
-
-            <!-- Aviso Oficial -->
-            <div class="notice-box">
-                <h3>
-                    <span class="icon">📢</span>
-                    AVISO DE ALTERAÇÃO DE PROCEDIMENTOS
-                </h3>
-                <p style="color: #78350F; line-height: 1.7;">
-                    A partir de [DATA DE IMPLEMENTAÇÃO], a estratégia de transição entre sistemas será alterada conforme 
-                    detalhado neste relatório. Todos os departamentos envolvidos devem adequar seus processos à nova 
-                    realidade descrita nas seções subsequentes.
-                </p>
-            </div>
-
-            <!-- Seção 1: Estratégia Descontinuada -->
-            <h2 class="section-title">
-                <span class="section-number">1</span>
-                ESTRATÉGIA ORIGINAL - INATIVA
-            </h2>
-
-            <p style="margin-bottom: 20px; color: #374151;">
-                A estratégia inicial previa a coexistência operacional do sistema legado e novo sistema até a completa 
-                substituição de todas as funcionalidades. Esta abordagem foi aprovada em [DATA] e teve vigência até 
-                [DATA DA DESCONTINUAÇÃO].
-            </p>
-
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Característica</th>
-                        <th>Descrição Operacional</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Operação Paralela</strong></td>
-                        <td>Ambos os sistemas ativos simultaneamente</td>
-                        <td><span class="tag tag-discontinued">Descontinuado</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Transição Gradual</strong></td>
-                        <td>Migração de features conforme disponibilidade</td>
-                        <td><span class="tag tag-discontinued">Descontinuado</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Dupla Manutenção</strong></td>
-                        <td>Correções e ajustes em ambas plataformas</td>
-                        <td><span class="tag tag-discontinued">Descontinuado</span></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Seção 2: Justificativa da Alteração -->
-            <h2 class="section-title">
-                <span class="section-number">2</span>
-                FUNDAMENTAÇÃO DA MUDANÇA
-            </h2>
-
-            <p style="margin-bottom: 20px; color: #374151;">
-                A alteração foi motivada por indicadores objetivos coletados durante o período de operação paralela:
-            </p>
-
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <h4>📊 Impactos Operacionais</h4>
-                    <ul>
-                        <li>• <strong>Retrabalho:</strong> 40% do tempo da equipe dedicado a sincronizações</li>
-                        <li>• <strong>Risco de Dados:</strong> 3 incidentes de inconsistência em 30 dias</li>
-                        <li>• <strong>Custo Duplicado:</strong> Infraestrutura e licenças em dobro</li>
-                    </ul>
-                </div>
-
-                <div class="impact-card">
-                    <h4>⚠️ Consequências Identificadas</h4>
-                    <ul>
-                        <li>• <strong>Atraso no roadmap:</strong> 2 sprints de atraso acumulados</li>
-                        <li>• <strong>Complexidade para usuários:</strong> Necessidade de treinamento dual</li>
-                        <li>• <strong>Desgaste da equipe:</strong> Context switching constante</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Seção 3: Nova Estratégia Institucional -->
-            <h2 class="section-title">
-                <span class="section-number">3</span>
-                ESTRATÉGIA VIGENTE - MVP + INCREMENTOS
-            </h2>
-
-            <p style="margin-bottom: 20px; color: #374151;">
-                Aprovada em [DATA DA APROVAÇÃO], a nova estratégia estabelece entrega prioritária de funcionalidades 
-                essenciais definidas pela empresa, com desativação imediata do sistema legado para os processos migrados.
-            </p>
-
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Característica</th>
-                        <th>Descrição Operacional</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>MVP Definido</strong></td>
-                        <td>Funcionalidades mínimas validadas pela empresa</td>
-                        <td><span class="tag tag-active">Ativo</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Entrega Direta</strong></td>
-                        <td>Sistema novo em produção para processos selecionados</td>
-                        <td><span class="tag tag-active">Ativo</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Evolução Priorizada</strong></td>
-                        <td>New features baseadas em backlog empresarial</td>
-                        <td><span class="tag tag-active">Ativo</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Desativação Rápida</strong></td>
-                        <td>Legado desativado para módulos migrados em [X] semanas</td>
-                        <td><span class="tag tag-active">Ativo</span></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Seção 4: Roadmap de Implementação -->
-            <h2 class="section-title">
-                <span class="section-number">4</span>
-                ROADMAP DE IMPLEMENTAÇÃO
-            </h2>
-
-            <div class="roadmap">
-                <h3>Fases de Transição</h3>
-
-                <div class="roadmap-item">
-                    <div class="roadmap-phase">FASE 1</div>
-                    <div class="roadmap-content">
-                        <h5>Consolidação MVP</h5>
-                        <p>
-                            <strong>Período:</strong> [DATAS]<br>
-                            <strong>Objetivo:</strong> Finalizar funcionalidades mínimas validadas<br>
-                            <strong>Entrega:</strong> Sistema novo operacional para processos críticos
-                        </p>
-                    </div>
-                </div>
-
-                <div class="roadmap-item">
-                    <div class="roadmap-phase">FASE 2</div>
-                    <div class="roadmap-content">
-                        <h5>Desativação Parcial Legado</h5>
-                        <p>
-                            <strong>Período:</strong> [DATAS]<br>
-                            <strong>Objetivo:</strong> Desativar módulos migrados do sistema antigo<br>
-                            <strong>Impacto:</strong> Redução de 70% na duplicação de esforços
-                        </p>
-                    </div>
-                </div>
-
-                <div class="roadmap-item">
-                    <div class="roadmap-phase">FASE 3</div>
-                    <div class="roadmap-content">
-                        <h5>Evolução Incremental</h5>
-                        <p>
-                            <strong>Período:</strong> Início [DATA]<br>
-                            <strong>Objetivo:</strong> Entrega sprintly de features do backlog prioritário<br>
-                            <strong>Governança:</strong> Revisão mensal de prioridades com stakeholders
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Conclusão -->
-            <div class="action-required">
-                <h4>✅ Ações e Responsabilidades</h4>
-                <p style="color: #374151; margin-bottom: 20px;">
-                    A decisão foi documentada e comunicada. As equipes devem proceder conforme o roadmap acima.
+        <!-- Comunicado -->
+        <div class="comunicado-container">
+            <!-- Cabeçalho Corporativo -->
+            <div class="comunicado-header">
+                <span class="comunicado-badge">COMUNICADO OFICIAL</span>
+                <h1 class="comunicado-title">Mudança na Estratégia de Transição</h1>
+                <p class="comunicado-subtitle">
+                    Alteração na abordagem de desenvolvimento: de paralelismo contínuo para MVP prioritário + evolução incremental
                 </p>
                 
-                <ul class="action-list">
-                    <li>
-                        <strong>Equipe de Desenvolvimento:</strong> Adequar sprint planning ao novo modelo
-                    </li>
-                    <li>
-                        <strong>Gestores de Departamento:</strong> Validar funcionalidades do MVP até [DATA LIMITE]
-                    </li>
-                    <li>
-                        <strong>Infraestrutura:</strong> Preparar ambiente para carga exclusiva do novo sistema
-                    </li>
-                    <li>
-                        <strong>Segurança da Informação:</strong> Reavaliar políticas de backup e recuperação
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Assinaturas -->
-            <div class="signature">
-                <div class="signature-grid">
-                    <div class="signature-box">
-                        <p>Responsável pelo Projeto</p>
-                        <div class="signature-line"></div>
-                        <strong>[SEU NOME]</strong><br>
-                        <span style="color: #6B7280; font-size: 12px;">Cargo: Desenvolvedor Líder</span>
-                    </div>
-                    <div class="signature-box">
-                        <p>Aprovação da Diretoria</p>
-                        <div class="signature-line"></div>
-                        <strong>[NOME DO APROVADOR]</strong><br>
-                        <span style="color: #6B7280; font-size: 12px;">Cargo: [CARGO]</span>
-                    </div>
+                <div class="comunicado-meta">
+                    <div>Documento: PLN-2024-001</div>
+                    <div>Versão: 2.0 - Aprovado</div>
+                    <div>Data: [DATA DA DECISÃO]</div>
+                    <div>Status: Em Implementação</div>
                 </div>
             </div>
 
-            <!-- Footer do Relatório -->
-            <div class="footer-report">
-                <p>Este documento substitui qualquer versão anterior da estratégia de transição</p>
-                <p>Última atualização: [DATA] | Versão controlada: Git commit #[HASH]</p>
-            </div>
-        </div>
-    </div>
+            <!-- Conteúdo -->
+            <div class="comunicado-content">
+                <!-- Aviso Oficial -->
+                <div class="official-notice">
+                    <h3>📢 Aviso de Alteração de Procedimentos</h3>
+                    <p>
+                        A partir de <strong>[DATA DE IMPLEMENTAÇÃO]</strong>, a estratégia de transição entre sistemas 
+                        será alterada conforme detalhado neste documento. Esta decisão foi validada pela diretoria 
+                        responsável e é de cumprimento obrigatório por todas as equipes envolvidas.
+                    </p>
+                </div>
 
-    <script>
-        // Efeito de impressão
-        document.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'p') {
-                window.print();
-            }
-        });
+                <!-- Resumo Executivo -->
+                <section>
+                    <h2 style="color: #0A2647; font-size: 22px; font-weight: 700; margin-bottom: 20px;">
+                        Resumo Executivo
+                    </h2>
+                    <p style="color: #374151; line-height: 1.8; font-size: 15px;">
+                        A estratégia inicial de manutenção paralela entre sistema legado e novo foi descontinuada 
+                        após análise de indicadores que demonstraram <strong>ineficiência operacional e retrabalho crescente</strong>. 
+                        A nova abordagem estabelece entrega imediata do MVP funcional (funcionalidades mínimas definidas pela empresa) 
+                        seguido de evolução incremental, garantindo foco no valor e redução de custos.
+                    </p>
+                </section>
 
-        // Adiciona classe para impressão
-        const printBtn = document.createElement('button');
-        printBtn.textContent = '🖨️ Imprimir Relatório';
-        printBtn.style.position = 'fixed';
-        printBtn.style.bottom = '20px';
-        printBtn.style.right = '20px';
-        printBtn.style.padding = '12px 20px';
-        printBtn.style.background = '#0A2647';
-        printBtn.style.color = 'white';
-        printBtn.style.border = 'none';
-        printBtn.style.borderRadius = '6px';
-        printBtn.style.cursor = 'pointer';
-        printBtn.style.zIndex = '1000';
-        printBtn.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-        printBtn.onclick = () => window.print();
-        document.body.appendChild(printBtn);
-    </script>
-</body>
-</html>
+                <!-- Comparação de Estratégias -->
+                <section class="strategy-comparison">
+                    <!-- Estratégia Antiga -->
+                    <div class="strategy-card old">
+                        <div class="card-header">
+                            <span class="card-status">DESCONTINUADA</span>
+                            <h3 class="card-title">Estratégia Original</h3>
+                            <p class="card-subtitle">Operação paralela indefinida</p>
+                        </div>
+                        <div class="card-body">
+                            <h4>🎯 Abordagem</h4>
+                            <p style="color: #6B7280; font-size: 14px; margin-bottom: 20px;">
+                                Sistemas antigo e novo operando simultaneamente até substituição total
+                            </p>
+                            
+                            <h4>📈 Impactos Negativos</h4>
+                            <ul class="feature-list">
+                                <li>Retrabalho de 40% do tempo da equipe</li>
+                                <li>Custos duplicados de infraestrutura</li>
+                                <li>3 incidentes de inconsistência de dados em 30 dias</li>
+                                <li>Atraso de 2 sprints no roadmap</li>
+                                <li>Complexidade de treinamento dual para usuários</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Nova Estratégia -->
+                    <div class="strategy-card new">
+                        <div class="card-header">
+                            <span class="card-status">VIGENTE</span>
+                            <h3 class="card-title">Nova Estratégia</h3>
+                            <p class="card-subtitle">MVP + Evolução Incremental</p>
+                        </div>
+                        <div class="card-body">
+                            <h4>🎯 Abordagem</h4>
+                            <p style="color: #6B7280; font-size: 14px; margin-bottom: 20px;">
+                                Entrega rápida de funcionalidades essenciais + melhorias sprint a sprint
+                            </p>
+                            
+                            <h4>✅ Benefícios Esperados</h4>
+                            <ul class="feature-list">
+                                <li>Redução de 60% nos custos de manutenção</li>
+                                <li>Desativação do legado em [X] semanas</li>
+                                <li>Foco 100% da equipe no sistema novo</li>
+                                <li>Feedback real dos usuários para priorização</li>
+                                <li>ROI visível a cada sprint</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Impactos da Mudança -->
+                <section class="impact-section">
+                    <h3 class="impact-title">📊 Impactos da Alteração</h3>
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="icon">⚡</div>
+                            <h5>Velocidade</h5>
+                            <p>Desativação do legado acelerada em meses</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="icon">💰</div>
+                            <h5>Economia</h5>
+                            <p>Custo operacional reduzido significativamente</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="icon">🎯</div>
+                            <h5>Foco</h5>
+                            <p>Equipe dedicada exclusivamente ao novo sistema</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Roadmap Visual -->
+                <section class="roadmap-section">
+                    <h3 class="roadmap-title">🗓️ Roadmap de Implementação</h3>
+                    <div class="roadmap-timeline">
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">FASE 1 (ATUAL)</div>
+                            <div class="roadmap-content">
+                                <h4>Consolidação do MVP</h4>
+                                <p>
+                                    Finalizar funcionalidades mínimas validadas pela empresa. 
+                                    <strong>Entrega:</strong> [DATA PREVISTA]
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="roadmap-item">
+                            <div class="roadmap-phase">FASE 2</div>
+                            <div class="roadmap-content">
+                                <h4>Desativação Par

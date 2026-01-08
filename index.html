@@ -2,69 +2,170 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <title>Notas do Projeto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apresentação do Projeto - [Nome da Empresa]</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        body {
+            background: #fafafa;
+            color: #374151;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        header p {
+            color: #6b7280;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        }
+
+        .card h2 {
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            color: #111827;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            color: #4b5563;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            color: #374151;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        .status-ok {
+            color: #15803d;
+            font-weight: 500;
+        }
+
+        .status-dev {
+            color: #b45309;
+            font-weight: 500;
+        }
+
+        .status-aprovar {
+            color: #b91c1c;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            border-top: 1px solid #e5e7eb;
+            background: #f9fafb;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Barra de navegação -->
-        <nav class="navbar">
-            <div class="nav-logo">Projeto [Sigla]</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="planejamento.html">Planejamento</a></li>
-                <li><a href="tutorial.html">Tutorial</a></li>
-                <li><a href="decisao.html">Decisão</a></li>
-            </ul>
-        </nav>
 
-        <!-- Seção Hero -->
-        <main class="hero-section">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="gradient-text">Bem-vindo à Apresentação</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Acompanhamento do desenvolvimento da aplicação<br>
-                    <strong>Status:</strong> Em desenvolvimento | <strong>Atualização:</strong> Março 2024
-                </p>
-                
-                <div class="project-card">
-                    <div class="card-icon">🚀</div>
-                    <h2>[Nome do Projeto/Sistema]</h2>
-                    <p>Apresentação de acompanhamento, mudanças no planejamento e demonstração das funcionalidades desenvolvidas.</p>
-                </div>
+<header>
+    <h1>Notas do Projeto</h1>
+    <p>Correções, mudanças estruturais e novas funcionalidades</p>
+</header>
 
-                <div class="cta-buttons">
-                    <a href="planejamento.html" class="btn-primary">Ver Mudanças no Planejamento</a>
-                    <a href="tutorial.html" class="btn-secondary">Ver Tutorial das Funcionalidades</a>
-                </div>
-            </div>
+<main>
 
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="card-header">
-                        <div class="status-indicator online"></div>
-                        <span>Status do Projeto</span>
-                    </div>
-                    <div class="progress-info">
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%"></div>
-                        </div>
-                        <p class="progress-text">75% Concluído</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+    <section class="card">
+        <h2>🐞 Correção de Bugs</h2>
+        <ul>
+            <li>Acentuação de palavras — <span class="status-ok">Corrigido</span></li>
+            <li>Campo para visualização do último pagamento — <span class="status-ok">Corrigido</span></li>
+            <li>Área de impressão — <span class="status-dev">Em desenvolvimento (hoje)</span></li>
+        </ul>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Desenvolvido por [Seu Nome] | [Nome da Empresa] © 2024</p>
-        </footer>
-    </div>
+    <section class="card">
+        <h2>🗄️ Mudança na Database</h2>
+        <p>
+            O sistema atual utiliza uma database em <strong>Access</strong>, que atende bem às
+            necessidades atuais, sem problemas relevantes de inconsistência ou lentidão.
+        </p>
+        <p>
+            Para o novo sistema, foi identificada uma limitação na forma de armazenamento,
+            especialmente com o crescimento do volume de dados.
+        </p>
+        <p>
+            A database foi migrada para um <strong>banco de dados local</strong>, que pode ser
+            alocado em rede, permitindo funcionamento simultâneo em todos os computadores.
+        </p>
+        <p>
+            <strong>Impacto:</strong> com databases separadas, não será possível operar os dois
+            sistemas em paralelo durante a transição.
+        </p>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="card">
+        <h2>✨ Novas Funcionalidades para Aprovação</h2>
+        <ul>
+            <li>Mudança na compactação Z — <span class="status-ok">Integrada ao cadastro</span></li>
+            <li>Rateio — <span class="status-dev">Anexo</span></li>
+            <li>Cálculo (mensal ou semestral) — <span class="status-dev">Anexo</span></li>
+            <li>Relatórios antigos — <span class="status-dev">Anexo</span></li>
+            <li>Relatório novo — <span class="status-dev">Anexo</span></li>
+            <li>Nova aba no cadastro: Pagamentos — <span class="status-aprovar">Aprovar</span></li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    Desenvolvido por [Seu Nome] © 2024
+</footer>
+
 </body>
 </html>

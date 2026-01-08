@@ -1,0 +1,28 @@
+notas
+
+
+correção de bugs->
+
+- acentuação de palavras | corrigido
+- campo para visualização último pagamento | corrigido
+- area impressão | desenvolvimento (hoje)?
+
+
+mudança na database->
+
+- o sistema atualmente trabalha com uma database com acess, ela funnciona muito bem com o sistema atual e não apresenta problemas preocupantes, sejam eles relacionados a inconsistencia ou lentidão.
+
+- porém, para novo sistema é apresentada uma falha na forma de armazenamento, conforme ele cresce em número de dados armazenados ele fica mais lento e pode apresentar inconsistencias. 
+
+- dessa forma a database foi modificada para um banco de dados local, esse banco de dados pode ser alocado na rede como no sistema atual, funcionando simultaneamente em todas os computadores ligados a essa rede.
+
+essa mudança implica em uma mudança na estrategia de transição para o novo sistema, visto que com databases separadas não é possivel que sejam trabalhados em paralelo os dois sistemas.
+
+novas funcionalidades para aprovação->
+
+- mudança na compactação z | agora está em cadastro
+
+- rateio | anexos
+- relatório antigos | anexo
+- relatório novo | anexo
+- nova aba cadastro - Pagamentos | aprovar
